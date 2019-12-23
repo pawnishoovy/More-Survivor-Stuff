@@ -1,10 +1,20 @@
 [
   {
     "type": "technique",
+    "id": "mss_tec_sledge_tap",
+    "name": "Lovetap",
+    "messages": [ "You thrust your weapon at %s", "<npcname> thrusts their weapon at %s" ],
+    "min_melee": 0,
+    "melee_allowed": true,
+    "crit_ok": false,
+    "mult_bonuses": [ [ "movecost", 0.5 ], [ "damage", "bash", 0.66 ], [ "damage", "cut", 0.66 ], [ "damage", "stab", 0.66 ] ]
+  },
+  {
+    "type": "technique",
     "id": "mss_tec_sledge_jab",
     "name": "Slam Jab",
     "messages": [ "You jab powerfully at %s with your weapon", "<npcname> jabs powerfully at %s with their weapon" ],
-    "min_melee": 0,
+    "min_melee": 1,
     "melee_allowed": true,
     "crit_ok": false,
     "stun_dur": 1
@@ -15,6 +25,7 @@
     "name": "Gutbuster",
     "messages": [ "You slam the end of your weapon into %s and drive them back", "<npcname> slams the end of their weapon into %s and drives them back" ],
     "min_melee": 1,
+    "weighting": 4,
     "melee_allowed": true,
     "crit_tec": true,
     "stun_dur": 2,
@@ -41,9 +52,9 @@
     "melee_allowed": true,
     "req_buffs": "mss_buff_sledge_onblock",
     "crit_ok": true,
-    "weighting": 4,
-    "stun_dur": 2,
-	"knockback_dist": 1,
+    "weighting": 8,
+    "stun_dur": 3,
+	"knockback_dist": 3,
     "mult_bonuses": [ [ "damage", "bash", 0.5 ], [ "damage", "cut", 0 ], [ "damage", "stab", 0 ] ]
   },
   {
@@ -56,8 +67,8 @@
     "req_buffs": "mss_buff_sledge_onmiss",
     "crit_ok": true,
     "weighting": 2,
-    "stun_dur": 1,
-	"knockback_dist": 1,
+    "stun_dur": 3,
+	"knockback_dist": 2,
     "mult_bonuses": [ [ "damage", "bash", 0.5 ], [ "damage", "cut", 0 ], [ "damage", "stab", 0 ] ]
   },
   {
@@ -69,12 +80,12 @@
     "melee_allowed": true,
     "req_buffs": "mss_buff_sledge_onmiss",
     "crit_tec": true,
-    "weighting": 4,
+    "weighting": 10,
     "stun_dur": 2,
 	"down_dur": 2,
 	"knockback_dist": 5,
 	"knockback_spread": 1,
-    "mult_bonuses": [ [ "damage", "bash", 1.5 ] ]
+    "mult_bonuses": [ [ "damage", "bash", 1.8 ] ]
   },
   {
     "type": "technique",
@@ -85,12 +96,12 @@
     "melee_allowed": true,
     "stunned_target": true,
     "crit_tec": true,
-    "weighting": 4,
+    "weighting": 10,
     "stun_dur": 2,
 	"down_dur": 2,
 	"knockback_dist": 5,
 	"knockback_spread": 1,
-    "mult_bonuses": [ [ "movecost", 1.3 ], [ "damage", "bash", 1.5 ] ]
+    "mult_bonuses": [ [ "movecost", 1.3 ], [ "damage", "bash", 1.8 ] ]
   },
   {
     "type": "technique",
@@ -111,6 +122,6 @@
     "melee_allowed": true,
     "defensive": true,
     "miss_recovery": true,
-    "mult_bonuses": [ [ "movecost", 0.95 ] ]
+    "mult_bonuses": [ [ "movecost", 0.8 ] ]
   }
 ]

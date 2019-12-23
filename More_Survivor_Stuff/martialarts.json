@@ -35,22 +35,24 @@
       {
         "id": "mss_buff_sledge_onmiss",
         "name": "Swinging Big",
-        "description": "That's it! Now direct it towards them! \n\n+20%% bonus to bashing damage.\nEnables \"Flying Blow\" technique.\nEnables \"Violent Shove\" technique.\nLasts 1 turn.",
+        "description": "That's it! Now direct it towards them! \n\n+20%% bonus to bashing damage.\nEnables \"Flying Blow\" technique.\nEnables \"Violent Shove\" technique.\nLasts 2 turns. Stacks 3 times.",
         "melee_allowed": true,
         "min_melee": 4,
-        "buff_duration": 1,
+        "buff_duration": 2,
+        "max_stacks": 2,
         "mult_bonuses": [ [ "damage", "bash", 1.20 ] ]
       }
     ],
     "onattack_buffs": [
       {
         "id": "mss_buff_sledge_onhit",
-        "name": "Tiring Out",
-        "description": "Every attack tires you out. Take a breather.\n\n+15%% movecost.\nLasts 1 turn. Stacks 3 times.",
+        "name": "Tiring Control",
+        "description": "Directing your enemy with your strikes proves useful to make them predictable, but you grow inefficient with every new move. Take a break. \n\n+1 Block attempt.\n+15%% movecost.\nLasts 2 turns. Stacks 3 times.",
         "melee_allowed": true,
         "min_melee": 0,
-        "buff_duration": 1,
+        "buff_duration": 2,
         "max_stacks": 3,
+        "bonus_blocks": 1,
 		"mult_bonuses": [ [ "movecost", 1.15 ] ]
       }
     ],
@@ -66,6 +68,18 @@
         "mult_bonuses": [ [ "damage", "bash", 1.10 ], [ "movecost", 0.9 ] ]
       }
     ],
+    "ondodge_buffs": [
+      {
+        "id": "mss_buff_sledge_ondodge",
+        "name": "Eager For Contact",
+        "description": "You dodged. Next time, you'll take the hit and make them pay properly. \n\n-3.0 Dodge skill\nLasts 3 turns.  Stacks 3 times.",
+        "melee_allowed": true,
+        "min_melee": 0,
+        "buff_duration": 3,
+        "max_stacks": 3,
+        "flat_bonuses": [ [ "dodge", -3.0 ] ]
+      }
+    ],
     "techniques": [ "mss_tec_sledge_counter",
 	"mss_tec_sledge_shove",
 	"mss_tec_sledge_feint",
@@ -74,6 +88,7 @@
 	"mss_tec_sledge_break",
 	"mss_tec_sledge_jab",
 	"mss_tec_sledge_gutbuster",
+	"mss_tec_sledge_tap",
 	"mss_tec_sledge_shoveonmiss"
 	],
     "weapons": [
@@ -91,8 +106,8 @@
       "lucern_hammerfake",
       "makeshift_halberd",
       "pickaxe",
-      "homewrecker",
-      "mss_survivor_sledge"
+	  "homewrecker",
+	  "mss_survivor_sledge"
     ]
   }
 ]
