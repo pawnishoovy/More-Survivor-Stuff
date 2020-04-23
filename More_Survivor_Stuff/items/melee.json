@@ -1,8 +1,8 @@
 [
   {
     "type": "GENERIC",
-    "id": { "str": "survivor sledge" },
-    "name": "survivor sledge",
+    "id": "mss_survivor_sledge",
+    "name": { "str": "survivor sledge" },
     "description": "A highly customized sledgehammer with carefully-placed rubber along the handle and a wicked-looking steel head, sharp on one end and square on another. Designed for post-apocalyptic swinging pleasure, though you could also use it as a clumsy tool.",
     "weight": "5800 g",
     "to_hit": -2,
