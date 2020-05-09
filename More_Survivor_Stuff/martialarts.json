@@ -3,7 +3,7 @@
     "type": "martial_art",
     "id": "mss_style_sledge",
     "name": "Survivor Sledge-Fu",
-    "description": "You have started to become truly proficient in handling heavy weaponry. Sledge-Fu allows you to bully an opponent using your strength until the right moment presents itself to swing your weapon properly for a killing blow.",
+    "description": "You have started to become rather proficient in handling heavy weaponry. Sledge-Fu allows you to bully an opponent using your strength until the right moment presents itself to swing your weapon properly for a killing blow.",
     "initiate": [ "You roll your neck and get ready to shatter your enemies.", "%s rolls their neck menacingly." ],
     "autolearn": [ [ "bashing", "5" ] ],
     "strictly_melee": true,
@@ -111,6 +111,89 @@
       "pickaxe",
 	  "homewrecker",
 	  "mss_survivor_sledge"
+    ]
+  },
+  {
+    "type": "martial_art",
+    "id": "mss_style_flail",
+    "name": "Survivor Flail-Fu",
+    "description": "You have started to become very proficient in handling heavy weaponry. Flail-Fu lets you redirect opponents as the chain wishes, or whirl the head for a heavy blow.",
+    "initiate": [ "You grip your flail confidently and start swaying the chain.", "%s grips their flail and sways the chain idly." ],
+    "autolearn": [ [ "bashing", "6" ] ],
+    "strictly_melee": true,
+    "static_buffs": [
+      {
+        "id": "mss_buff_flail_metalflow",
+        "name": "Metal Must Flow",
+        "description": "Your flail must keep spinning at all costs. \n\n+1.0 Dodge skill",
+        "melee_allowed": true,
+        "min_melee": 0,
+        "flat_bonuses": [ { "stat": "dodge", "scale": 1.0 } ]
+      }
+    ],
+    "onpause_buffs": [
+      {
+        "id": "mss_buff_flail_whirl",
+        "name": "Whirling Mass",
+        "description": "The faster it moves, the harder it hits.\n\n+10% bonus to bashing damage.\nLasts 1 turn.  Stacks 5 times.",
+        "skill_requirements": [ { "name": "bashing", "level": 6 } ],
+        "melee_allowed": true,
+        "buff_duration": 1,
+        "max_stacks": 5,
+        "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 1.1 }
+        ]
+      }
+    ],
+    "onmiss_buffs": [
+      {
+        "id": "mss_buff_flail_onmiss",
+        "name": "Missed",
+        "description": "Getting the flail back into proper control is quite the ordeal. \n\n-10%% bashing damage.\nLasts 1 turn. Stacks 2 times.",
+        "melee_allowed": true,
+        "min_melee": 0,
+        "buff_duration": 1,
+        "max_stacks": 2,
+        "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 0.8 } ]
+      }
+    ],
+    "onattack_buffs": [
+      {
+        "id": "mss_buff_flail_onhit",
+        "name": "Slowing Mass",
+        "description": "Every strike takes from the speed you've built, but perhaps you have enough to keep going still.\n-20%% bashing damage.\nLasts 2 turns. Stacks 5 times.",
+        "melee_allowed": true,
+        "min_melee": 0,
+        "buff_duration": 2,
+        "max_stacks": 5,
+        "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 0.8 } ]
+      }
+    ],
+    "ondodge_buffs": [
+      {
+        "id": "mss_buff_flail_ondodge",
+        "name": "Swift Mass",
+        "description": "Dodging an attack only quickens your weapon!\n\n+10%% bashing damage.\nEnables \"Stunning Blow\" technique.\nLasts 1 turns.  Stacks 3 times.",
+        "melee_allowed": true,
+        "min_melee": 0,
+        "buff_duration": 1,
+        "max_stacks": 3,
+        "flat_bonuses": [ { "stat": "damage", "type": "bash", "scale": 1.1 } ]
+      }
+    ],
+    "techniques": [ "mss_tec_flail_break",
+	"mss_tec_flail_feint",
+	"mss_tec_flail_stunningblow",
+	"mss_tec_flail_swingaround",
+	"mss_tec_flail_swingandfling",
+	"mss_tec_flail_direct",
+	"mss_tec_flail_wrappedtrip",
+	"mss_tec_flail_kickover",
+	"mss_tec_flail_heavyblow"
+	],
+    "weapons": [
+      "2h_flail_steel",
+	  "2h_flail_wood",
+	  "mss_survivor_flail"
     ]
   }
 ]
