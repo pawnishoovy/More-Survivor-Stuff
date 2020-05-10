@@ -135,10 +135,10 @@
       {
         "id": "mss_buff_flail_whirl",
         "name": "Whirling Mass",
-        "description": "The faster it moves, the harder it hits.\n\n+10% bonus to bashing damage.\nLasts 1 turn.  Stacks 5 times.",
+        "description": "The faster it moves, the harder it hits.\n\n+10% bonus to bashing damage.\nLasts 3 turns.  Stacks 5 times.",
         "skill_requirements": [ { "name": "bashing", "level": 6 } ],
         "melee_allowed": true,
-        "buff_duration": 1,
+        "buff_duration": 3,
         "max_stacks": 5,
         "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 1.1 }
         ]
