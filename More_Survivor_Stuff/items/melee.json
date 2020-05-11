@@ -52,5 +52,22 @@
     "cutting": 4,
     "price": 100000,
     "qualities": [ [ "HAMMER", 1 ] ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "mss_survivor_fighting_gauntlet",
+    "symbol": "3",
+    "color": "dark_gray",
+    "name": { "str": "survivor fighting gauntlet", "str_pl": "survivor fighting gauntlets" },
+    "description": "A customized metal gauntlet resembling a flanged mace, strapped securely to one's hand. Strange to get used to, but it will wildly improve punching power.",
+    "material": [ "steel", "leather" ],
+    "volume": "500 ml",
+    "weight": "890 g",
+    "bashing": 15,
+	"cutting": 1,
+    "price_postapoc": 500,
+    "flags": [ "UNARMED_WEAPON", "DURABLE_MELEE", "NONCONDUCTIVE" ],
+    "techniques": [ "WBLOCK_1" ],
+	"qualities": [ [ "HAMMER", 1 ] ]
   }
 ]
