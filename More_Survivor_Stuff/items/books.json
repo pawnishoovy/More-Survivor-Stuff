@@ -12,7 +12,7 @@
     "material": [ "paper" ],
     "symbol": "?",
     "color": "red",
-    "skill": "marksmanship",
+    "skill": "gun",
     "required_level": 6,
     "max_level": 7,
     "intelligence": 13,
