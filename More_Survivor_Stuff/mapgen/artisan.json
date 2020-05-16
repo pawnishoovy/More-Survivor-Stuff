@@ -65,7 +65,7 @@
 		"U": [ "f_dumpster", "f_recycle_bin" ]
       },
       "items": {
-        "L": { "item": "mechanics", "chance": 60, "repeat": [ 1, 2 ] },
+        "L": { "item": "tools_artisan", "chance": 60, "repeat": [ 1, 2 ] },
 		"w": { "item": "clothing_work_set", "chance": 55 },
 		"b": { "item": "SUS_welding_gear", "chance": 80, "repeat": [ 1, 2 ] },
 		"d": { "item": "office", "chance": 70, "repeat": [ 1, 6 ] },
