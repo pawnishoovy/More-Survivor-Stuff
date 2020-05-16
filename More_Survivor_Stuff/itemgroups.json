@@ -3,5 +3,10 @@
     "id": "textbooks",
     "type": "item_group",
     "items": [ [ "mss_gunsmithing_book", 2 ] ]
+  },
+  {
+    "id": "artisan_logs",
+    "type": "item_group",
+    "items": [ [ "mss_workshop_log", 20 ], [ "mss_workshop_log_rail", 1 ] ]
   }
 ]
