@@ -7,6 +7,7 @@
     "ammo_type": "shot",
     "capacity": 50,
     "count": 50,
-    "linkage": "mss_ammolink_shot"
+    "linkage": "mss_ammolink_shot",
+	"pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "shot": 50 } } ]
   }
 ]

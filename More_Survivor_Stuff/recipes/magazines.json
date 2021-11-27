@@ -21,6 +21,9 @@
       [ [ "swage", -1 ] ],
       [ [ "forge", 450 ], [ "oxy_torch", 90 ] ]
     ],
+    "proficiencies": [
+      { "proficiency": "prof_metalworking" }
+    ],
     "components": [ [ [ "steel_lump", 8 ], [ "steel_chunk", 24 ] ] ]
   }
 ]

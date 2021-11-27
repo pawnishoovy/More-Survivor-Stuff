@@ -8,7 +8,6 @@
     "bodytype": "human",
     "species": [ "ZOMBIE", "HUMAN" ],
     "diff": 8,
-	"size": "HUGE",
     "volume": "900000 ml",
     "weight": "5000 kg",
     "hp": 900,
@@ -30,7 +29,10 @@
     "harvest": "zombie",
     "special_attacks": [ [ "SMASH", 30 ], [ "GRAB", 7 ], [ "PARROT", 0 ] ],
     "death_drops": "mon_zombie_monstroustechnician_death_drops",
-    "death_function": [ "NORMAL" ],
+    "death_function": {
+      "effect": { "id": "mss_mon_zombie_monstroustechnician_death", "hit_self": true },
+      "message": "The %s dramatically pauses and drops to the ground dead, shaking the earth on impact."
+    },
     "flags": [
       "SEES",
       "HEARS",

@@ -22,6 +22,12 @@
 	{ "id": "REAM", "level": 1 }
 	],
     "tools": [ [ [ "soldering_standard", 10, "LIST" ] ], [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ], [ [ "swage", -1 ] ], [ [ "mss_machining_rig", 600 ] ], [ [ "mss_lathing_rig", 600 ] ] ],
+    "proficiencies": [
+      { "proficiency": "prof_metalworking" },
+      { "proficiency": "prof_welding_basic" },
+      { "proficiency": "prof_gunsmithing_basic" },
+      { "proficiency": "prof_gunsmithing_improv" }
+    ],
     "components": [ [ [ "plastic_chunk", 8 ] ] ]
   },
   {
@@ -47,6 +53,13 @@
 	{ "id": "REAM", "level": 1 }
 	],
     "tools": [ [ [ "soldering_standard", 3, "LIST" ] ], [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ], [ [ "swage", -1 ] ], [ [ "mss_machining_rig", 300 ] ], [ [ "mss_lathing_rig", 300 ] ]  ],
+    "proficiencies": [
+      { "proficiency": "prof_metalworking" },
+      { "proficiency": "prof_welding_basic" },
+      { "proficiency": "prof_gunsmithing_basic" },
+      { "proficiency": "prof_gunsmithing_improv" },
+	  { "proficiency": "prof_gunsmithing_revolver" }
+    ],
     "components": [ [ [ "plastic_chunk", 1 ] ] ]
   },
   {
@@ -78,6 +91,15 @@
 	{ "id": "REAM", "level": 1 }
 	],
     "tools": [ [ [ "soldering_standard", 3, "LIST" ] ], [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ], [ [ "swage", -1 ] ], [ [ "mold_plastic", -1 ] ], [ [ "mss_machining_rig", 1000 ] ], [ [ "mss_lathing_rig", 1000 ] ] ],
+    "proficiencies": [
+      { "proficiency": "prof_metalworking" },
+      { "proficiency": "prof_welding_basic" },
+      { "proficiency": "prof_gunsmithing_basic" },
+      { "proficiency": "prof_gunsmithing_improv" },
+	  { "proficiency": "prof_elec_soldering" },
+	  { "proficiency": "prof_elec_circuits" },
+	  { "proficiency": "prof_electromagnetics" }
+    ],
     "components": [
       [ [ "plastic_chunk", 20 ] ],
       [ [ "sheet_metal", 1 ] ],
