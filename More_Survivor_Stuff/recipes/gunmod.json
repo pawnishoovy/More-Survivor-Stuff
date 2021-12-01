@@ -4,6 +4,7 @@
     "result": "mss_survivor_axeheadmod",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_MODS",
+	"activity_level": "BRISK_EXERCISE",
     "skill_used": "fabrication",
     "difficulty": 7,
     "time": "3 h",

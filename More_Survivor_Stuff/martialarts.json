@@ -11,10 +11,10 @@
       {
         "id": "mss_buff_sledge_stonewall",
         "name": "Intimidating Figure",
-        "description": "No man, machine or monstrosity can get through you and your strength. \n\n+2 Block attempts, -3.0 Dodge skill, blocked damage reduced by 70%% of Strength.",
+        "description": "No man, machine or monstrosity can get through you and your strength. \n\n -3.0 Dodge skill, blocked damage reduced by 70%% of Strength.",
         "melee_allowed": true,
         "skill_requirements": [ { "name": "melee", "level": 0 } ],
-        "bonus_blocks": 2,
+        "bonus_blocks": 1,
         "flat_bonuses": [ { "stat": "block", "scaling-stat": "str", "scale": 0.7 }, { "stat": "dodge", "scale": -3.0 } ]
       }
     ],
@@ -35,7 +35,7 @@
       {
         "id": "mss_buff_sledge_onmiss",
         "name": "Swinging Big",
-        "description": "That's it! Now direct it towards them! \n\n+20%% bonus to bashing damage.\nEnables \"Flying Blow\" technique.\nEnables \"Violent Shove\" technique.\nLasts 2 turns. Stacks 3 times.",
+        "description": "That's it! Now direct it towards them! \n\n+20%% bonus to bashing damage.\nEnables \"Flying Blow\" technique.\nLasts 2 turns. Stacks 3 times.",
         "melee_allowed": true,
         "skill_requirements": [ { "name": "melee", "level": 4 } ],
         "buff_duration": 2,
@@ -43,27 +43,39 @@
         "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 1.2 } ]
       }
     ],
+    "onpause_buffs": [
+      {
+        "id": "mss_buff_sledge_onpause",
+        "name": "Toying",
+        "description": "Whatever they have in store won't be enough to stop you./n+1 Block attempts, +2 blocking effectiveness\nLasts 1 turn.  Stacks 2 times.",
+        "melee_allowed": true,
+        "buff_duration": 1,
+        "max_stacks": 2,
+		"bonus_blocks": 1,
+		"flat_bonuses": [ { "stat": "block_effectiveness", "scale": 2.0 } ]
+      }
+    ],
     "onattack_buffs": [
       {
         "id": "mss_buff_sledge_onhit",
         "name": "Tiring Control",
-        "description": "Directing your enemy with your strikes proves useful to make them predictable, but you grow inefficient with every new move. Take a break. \n\n+1 Block attempt.\n+15%% movecost.\nLasts 2 turns. Stacks 3 times.",
+        "description": "Directing your enemy with your strikes proves useful to make them predictable, but you grow inefficient with every new move. Take a break. \n\n+1 Block attempt.\n+10%% movecost.\nLasts 2 turns. Stacks 3 times.",
         "melee_allowed": true,
         "skill_requirements": [ { "name": "melee", "level": 0 } ],
         "buff_duration": 2,
         "max_stacks": 3,
         "bonus_blocks": 1,
-		"mult_bonuses": [ { "stat": "movecost", "scale": 1.15 } ]
+		"mult_bonuses": [ { "stat": "movecost", "scale": 1.10 } ]
       }
     ],
     "onblock_buffs": [
       {
         "id": "mss_buff_sledge_onblock",
         "name": "Riled Up",
-        "description": "Like a little fly, buzzing around harmlessly... \n\n+10%% bonus to bashing damage.\n-10%% movecost.\nEnables \"Violent Shove\" technique.\nLasts 1 turn.  Stacks 3 times.",
+        "description": "Like a little fly, buzzing around harmlessly... \n\n+10%% bonus to bashing damage.\n-10%% movecost.\n\nLasts 1 turn.  Stacks 3 times.",
         "melee_allowed": true,
         "skill_requirements": [ { "name": "melee", "level": 1 } ],
-        "buff_duration": 1,
+        "buff_duration": 2,
         "max_stacks": 3,
         "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 1.1 }, { "stat": "movecost", "scale": 0.9 } ]
       }
@@ -81,15 +93,14 @@
       }
     ],
     "techniques": [ "mss_tec_sledge_counter",
-	"mss_tec_sledge_shove",
 	"mss_tec_sledge_feint",
-	"mss_tec_sledge_deathblow",
 	"mss_tec_sledge_deathblowstun",
+	"mss_tec_sledge_superiordeathblowstun",
+	"mss_tec_sledge_deathblowmiss",
 	"mss_tec_sledge_break",
 	"mss_tec_sledge_jab",
 	"mss_tec_sledge_gutbuster",
-	"mss_tec_sledge_tap",
-	"mss_tec_sledge_shoveonmiss"
+	"mss_tec_sledge_tap"
 	],
     "weapons": [
       "ax",

@@ -11,7 +11,7 @@
     "price": 16000,
     "price_postapoc": 3000,
     "to_hit": 2,
-    "material": [ "kevlar", "cotton" ],
+    "material": [ "kevlar_layered", "cotton" ],
     "symbol": "[",
     "looks_like": "gloves_lsurvivor",
     "color": "green",
@@ -34,7 +34,7 @@
     "price_postapoc": 3000,
     "to_hit": -1,
     "bashing": 1,
-    "material": [ "kevlar", "cotton" ],
+    "material": [ "kevlar_layered", "cotton" ],
     "symbol": "[",
     "looks_like": "boots",
     "color": "green",
@@ -57,7 +57,7 @@
     "price_postapoc": 4000,
     "to_hit": -1,
     "bashing": 7,
-    "material": [ "kevlar", "leather" ],
+    "material": [ "kevlar_layered", "leather" ],
     "symbol": "[",
     "looks_like": "helmet_army",
     "color": "dark_gray",
@@ -80,15 +80,16 @@
     "price": 20000,
     "price_postapoc": 3500,
     "to_hit": -3,
-    "max_charges": 100,
-    "initial_charges": 100,
     "charges_per_use": 1,
     "ammo": "gasfilter_m",
     "use_action": "GASMASK",
-    "material": [ "kevlar", "cotton" ],
+    "material": [ "kevlar_layered", "cotton" ],
     "symbol": "[",
     "color": "dark_gray",
-    "armor": [ { "encumbrance": 16, "coverage": 100, "covers": [ "eyes", "mouth" ] } ],
+    "armor": [
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 4 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 16 }
+    ],
 	"pocket_data": [
 	{ "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "gasfilter_m": 100 } }
 	],
@@ -112,7 +113,7 @@
     "price_postapoc": 2000,
     "to_hit": -1,
     "bashing": 6,
-    "material": [ "kevlar", "cotton" ],
+    "material": [ "kevlar_layered", "cotton" ],
     "symbol": "[",
     "looks_like": "hood_lsurvivor",
     "color": "green",
@@ -133,7 +134,7 @@
 	"longest_side": "10 cm",
     "price": 90000,
 	"price_postapoc": 12000,
-    "material": [ "kevlar", "cotton" ],
+    "material": [ "kevlar_layered", "cotton" ],
     "symbol": "[",
     "looks_like": "lsurvivor_suit",
     "color": "green",
@@ -171,7 +172,7 @@
     "color": "dark_gray",
 	"armor": [ { "encumbrance": 35, "coverage": 100, "covers": [ "hand_l", "hand_r" ] } ],
     "warmth": 15,
-    "material_thickness": 5,
+    "material_thickness": 6,
     "environmental_protection": 5,
     "flags": [ "VARSIZE", "WATERPROOF", "STURDY" ]
   },
@@ -234,22 +235,23 @@
     "price": 30000,
 	"price_postapoc": 13000,
     "to_hit": -3,
-    "max_charges": 150,
-    "initial_charges": 150,
     "ammo": "gasfilter_m",
     "use_action": "GASMASK",
     "material": [ "kevlar_rigid", "steel" ],
     "symbol": "[",
 	"looks_like": "mask_hsurvivor",
     "color": "dark_gray",
-    "armor": [ { "encumbrance": 40, "coverage": 100, "covers": [ "eyes", "mouth" ] } ],
+    "armor": [
+      { "covers": [ "eyes" ], "coverage": 100, "encumbrance": 12 },
+      { "covers": [ "mouth" ], "coverage": 100, "encumbrance": 36 }
+    ],
 	"pocket_data": [
-	{ "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "gasfilter_m": 100 } }
+	{ "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "gasfilter_m": 300 } }
 	],
     "warmth": 15,
     "material_thickness": 4,
     "environmental_protection": 1,
-    "environmental_protection_with_filter": 17,
+    "environmental_protection_with_filter": 16,
     "qualities": [ [ "GLARE", 1 ] ],
     "flags": [ "VARSIZE", "STURDY", "SUN_GLASSES" ]
   },
@@ -266,7 +268,7 @@
 	"price_postapoc": 6000,
     "to_hit": -1,
     "bashing": 10,
-    "material": [ "kevlar", "steel", "leather" ],
+    "material": [ "kevlar_layered", "steel", "leather" ],
     "symbol": "[",
     "looks_like": "hood_survivor",
     "color": "dark_gray",
@@ -306,7 +308,7 @@
       { "pocket_type": "CONTAINER", "max_contains_volume": "1500 ml", "max_contains_weight": "3 kg", "moves": 120 }
     ],
     "warmth": 15,
-    "material_thickness": 8,
+    "material_thickness": 9,
     "environmental_protection": 3,
     "flags": [ "VARSIZE", "WATERPROOF", "POCKETS", "RAINPROOF", "STURDY", "SLOWS_MOVEMENT" ]
   },
@@ -331,7 +333,7 @@
       { "covers": [ "arm_l", "arm_r" ], "coverage": 95, "encumbrance": [ 18, 18 ] }
     ],
     "warmth": 40,
-    "material_thickness": 6,
+    "material_thickness": 7,
     "environmental_protection": 3,
     "flags": [ "OVERSIZE", "OUTER", "WATERPROOF", "RAINPROOF" ]
   },

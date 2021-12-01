@@ -4,6 +4,7 @@
     "result": "mss_survivor_beltshotgun",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
+	"activity_level": "MODERATE_EXERCISE",
     "skill_used": "fabrication",
     "skills_required": [ "gun", 7 ],
     "difficulty": 10,
@@ -35,6 +36,7 @@
     "result": "mss_survivor_shotgunrevolver",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
+	"activity_level": "MODERATE_EXERCISE",
     "skill_used": "fabrication",
     "skills_required": [ "gun", 5 ],
     "difficulty": 10,
@@ -67,6 +69,7 @@
     "result": "mss_survivor_rail_rifle",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
+	"activity_level": "MODERATE_EXERCISE",
     "skill_used": "fabrication",
     "skills_required": [ [ "mechanics", 10 ], [ "electronics", 9 ], [ "computer", 4 ] ],
     "using": [
