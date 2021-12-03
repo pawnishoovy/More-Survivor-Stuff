@@ -31,28 +31,12 @@
     "messages": [ "You slam the end of your weapon into %s and drive them back", "<npcname> slams the end of their weapon into %s and drives them back" ],
    "skill_requirements": [ { "name": "melee", "level": 1 } ],
     "weighting": 4,
+	"required_buffs_all": "mss_buff_sledge_onpause",
     "melee_allowed": true,
     "crit_tec": true,
     "stun_dur": 2,
 	"knockback_dist": 1,
     "knockback_follow": true
-  },
-  {
-    "type": "technique",
-    "id": "mss_tec_sledge_counter",
-    "name": "Block And Bash",
-    "messages": [ "You parry and headbutt %s", "<npcname> parries and headbutts %s" ],
-    "skill_requirements": [ { "name": "melee", "level": 3 } ],
-    "melee_allowed": true,
-	"required_buffs_all": "mss_buff_sledge_onpause",
-    "block_counter": true,
-    "crit_ok": true,
-    "mult_bonuses": [
-      { "stat": "movecost", "scale": 0 },
-      { "stat": "damage", "type": "bash", "scale": 0.3 },
-      { "stat": "damage", "type": "cut", "scale": 0 },
-      { "stat": "damage", "type": "stab", "scale": 0 }
-    ]
   },
   {
     "type": "technique",
