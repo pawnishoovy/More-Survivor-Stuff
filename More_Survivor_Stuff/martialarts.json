@@ -23,10 +23,89 @@
   },
   {
     "type": "martial_art",
+    "id": "mss_style_mace",
+    "name": "Survivor Mace-Fu",
+    "description": "You've gotten the hang of knocking zombies around. Survivor Mace-Fu makes sure you can knock them right out of your way if they get in it.",
+    "initiate": [ "You itch to get somewhere and smack anything that tries to stop you.", "%s raises their weapon and takes up an agile stance." ],
+    "autolearn": [ [ "bashing", 4 ] ],
+    "strictly_melee": true,
+    "onmove_buffs": [
+      {
+        "id": "mss_buff_mace_onmove",
+        "name": "On The Move",
+        "description": "Survivor, moving out! \n\nDodge skill increased by 15% of Strength.\nLasts 1 turn.",
+        "melee_allowed": true,
+        "skill_requirements": [ { "name": "melee", "level": 0 } ],
+        "buff_duration": 1,
+		"flat_bonuses": [  { "stat": "dodge", "scaling-stat": "str", "scale": 0.15 } ]
+      }
+    ],
+    "onpause_buffs": [
+      {
+        "id": "mss_buff_mace_onpause",
+        "name": "Obstacle",
+        "description": "This one won't get out of the way without a fight. \nEnables stronger knockback moves, +5% critical hit chance.\nLasts 2 turns.",
+        "melee_allowed": true,
+        "buff_duration": 2,
+        "max_stacks": 1,
+        "flat_bonuses": [ { "stat": "crit_chance", "scale": 5.0 } ]
+      }
+    ],
+    "oncrit_buffs": [
+      {
+        "id": "mss_buff_mace_oncrit",
+        "name": "Way Through",
+        "description": "That should have done it - now go! \n\n+1 Block attempt.\n-15%% movecost, -5% damage, enables 'And Don't Come Back'. \nLasts 2 turns. Stacks 2 times.",
+        "melee_allowed": true,
+        "skill_requirements": [ { "name": "melee", "level": 0 } ],
+        "buff_duration": 1,
+        "max_stacks": 2,
+        "bonus_blocks": 1,
+		"mult_bonuses": [ { "stat": "movecost", "scale": 0.85 }, { "stat": "damage", "type": "bash", "scale": 0.95 }, { "stat": "damage", "type": "cut", "scale": 0.95 }, { "stat": "damage", "type": "stab", "scale": 0.95 } ]
+      }
+    ],
+    "techniques": [ "mss_tec_mace_break",
+	"mss_tec_mace_discombobulate",
+	"mss_tec_mace_hammer",
+	"mss_tec_mace_waymaker",
+	"mss_tec_mace_impatience",
+	"mss_tec_mace_kingsparade",
+	"mss_tec_mace_anddontcomeback",
+	"mss_tec_mace_imeanit"
+	],
+    "weapons": [
+      "baton-extended",
+      "blackjack",
+      "bowling_axe",
+      "bowling_pin",
+      "cane",
+      "cudgel",
+      "mace",
+      "mace_fake",
+      "mace_inferior",
+	  "mace_simple",
+	  "mace_trench",
+	  "makeshift_sap",
+      "morningstar",
+      "morningstar_fake",
+      "morningstar_inferior",
+      "PR24-extended",
+      "shillelagh",
+	  "shillelagh_weighted",
+	  "shillelagh_fake",
+	  "shocktonfa_off",
+	  "shocktonfa_on",
+	  "tonfa",
+	  "tonfa_wood",
+	  "warhammer"
+    ]
+  },
+  {
+    "type": "martial_art",
     "id": "mss_style_sledge",
     "name": "Survivor Sledge-Fu",
-    "description": "You have started to become rather proficient in handling heavy weaponry. Sledge-Fu allows you to bully an opponent using your strength until the right moment presents itself to swing your weapon properly for a killing blow.",
-    "initiate": [ "You roll your neck and get ready to shatter your enemies.", "%s rolls their neck menacingly." ],
+    "description": "You have started to become rather proficient in handling heavy weaponry. Sledge-Fu allows you to bully several opponents using your strength until the right moment presents itself to swing your weapon properly for a killing blow.",
+    "initiate": [ "You hold your weapon close and watch for weaklings come to challenge you.", "%s holds their weapon close." ],
     "autolearn": [ [ "bashing", 5 ] ],
     "strictly_melee": true,
     "static_buffs": [

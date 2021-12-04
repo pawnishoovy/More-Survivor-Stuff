@@ -1,6 +1,117 @@
 [
   {
     "type": "technique",
+    "id": "mss_tec_mace_discombobulate",
+    "name": "Discombobulate",
+    "messages": [ "You sweep across %s and switch your stance", "<npcname> sweeps across %s" ],
+    "skill_requirements": [ { "name": "melee", "level": 0 } ],
+    "melee_allowed": true,
+    "crit_ok": false,
+    "mult_bonuses": [
+      { "stat": "movecost", "scale": 0.5 },
+      { "stat": "damage", "type": "bash", "scale": 0.66 },
+      { "stat": "damage", "type": "cut", "scale": 0.66 },
+      { "stat": "damage", "type": "stab", "scale": 0.66 }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_mace_hammer",
+    "name": "Hammer",
+    "messages": [ "You whack across %s", "<npcname> whacks across %s" ],
+    "skill_requirements": [ { "name": "melee", "level": 0 } ],
+    "melee_allowed": true,
+    "crit_ok": false
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_mace_waymaker",
+    "name": "Waymaker",
+    "messages": [ "You send %s twirling away", "<npcname> sends %s twirling away" ],
+   "skill_requirements": [ { "name": "melee", "level": 1 } ],
+    "weighting": 2,
+    "melee_allowed": true,
+	"forbidden_buffs_all": [ "mss_buff_mace_onpause" ],
+    "crit_tec": true,
+    "stun_dur": 1,
+	"knockback_dist": 1,
+	"knockback_spread": 1
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_mace_impatience",
+    "name": "Impatience",
+    "messages": [ "You strike and shoulder-check %s in one swift move", "<npcname> strikes and shoulder-checks %s in one swift move" ],
+    "skill_requirements": [ { "name": "melee", "level": 3 } ],
+    "melee_allowed": true,
+    "required_buffs_all": "mss_buff_mace_onpause",
+    "crit_tec": true,
+    "weighting": 4,
+    "stun_dur": 1,
+	"knockback_dist": 2,
+	"knockback_spread": 1
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_mace_kingsparade",
+    "name": "King's Parade",
+    "messages": [ "You rear back and clear a path forward, pummeling %s and those nearby", "<npcname> rears back and clears a path forward, pummeling %s and those nearby" ],
+    "skill_requirements": [ { "name": "melee", "level": 4 } ],
+    "melee_allowed": true,
+    "required_buffs_all": "mss_buff_mace_onpause",
+    "crit_tec": true,
+    "weighting": 4,
+    "stun_dur": 1,
+	"aoe": "wide",
+	"knockback_dist": 2,
+	"knockback_spread": 1
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_mace_anddontcomeback",
+    "name": "And Don't Come Back",
+    "messages": [ "You grab and yank %s behind yourself", "<npcname> grabs and yanks %s behind themselves" ],
+    "skill_requirements": [ { "name": "melee", "level": 3 } ],
+    "melee_allowed": true,
+	"required_buffs_all": "mss_buff_mace_oncrit",
+    "crit_tec": true,
+    "weighting": 6,
+	"down_dur": 2,
+	"side_switch": true,
+    "mult_bonuses": [
+      { "stat": "movecost", "scale": 0.5 },
+      { "stat": "damage", "type": "bash", "scale": 1.0 },
+      { "stat": "damage", "type": "cut", "scale": 0.2 },
+      { "stat": "damage", "type": "stab", "scale": 0.2 }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_mace_imeanit",
+    "name": "I Mean It",
+    "messages": [ "Just to make sure, you ruthlessly bring your weapon down on %s", "<npcname> ruthlessly brings their weapon down on %s" ],
+    "skill_requirements": [ { "name": "melee", "level": 4 } ],
+    "melee_allowed": true,
+	"downed_target": true,
+    "crit_tec": true,
+    "weighting": 10,
+	"stun_dur": 2,
+    "mult_bonuses": [
+      { "stat": "damage", "type": "bash", "scale": 1.5 }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_mace_break",
+    "name": "Grab Break",
+    "messages": [ "The %s tries to grab you, but you keep them at bay!", "The %s tries to grab <npcname>, but they keep them at bay!" ],
+    "skill_requirements": [ { "name": "melee", "level": 6 } ],
+    "melee_allowed": true,
+    "defensive": true,
+    "grab_break": true
+  },
+  {
+    "type": "technique",
     "id": "mss_tec_sledge_tap",
     "name": "Lovetap",
     "messages": [ "You thrust your weapon at %s", "<npcname> thrusts their weapon at %s" ],
